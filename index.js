@@ -30,6 +30,15 @@ const addNewGoal = () => {
     
     // ⚠️ Hint 1: Check for duplicates
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
+
+    // Check for duplicates
+    for (const goal of goalList.children) {
+        if (goal.textContent === goalInput) {
+            alert('You cannot have duplicate Goals!!!');
+            return;
+        }
+    }
+
     
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
