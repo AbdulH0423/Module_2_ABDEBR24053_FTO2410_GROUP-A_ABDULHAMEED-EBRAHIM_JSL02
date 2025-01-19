@@ -43,6 +43,11 @@ const addNewGoal = () => {
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
     // If it's not a duplicate, proceed with adding it as a new goal.
+
+    // Add new goal if no duplicates
+    const newGoal = document.createElement('li');
+    newGoal.textContent = goalInput;
+
     
     // ⚠️ Hint 3: Code structure
     // You might want to wrap the duplicate-checking logic in an 'if' statement.
