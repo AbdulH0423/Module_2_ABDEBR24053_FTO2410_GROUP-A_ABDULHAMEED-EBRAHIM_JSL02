@@ -56,8 +56,11 @@ const addNewGoal = () => {
     // The event listener that removes goals when clicked is not related to this issue.
     // Focus on preventing duplicates for now.
     
-    const newGoal = document.createElement('li');
-    newGoal.textContent = goalInput;
+    // Add event listener to remove goal when clicked
+    newGoal.addEventListener('click', () => {
+        goalList.removeChild(newGoal);
+    });
+
     goalList.appendChild(newGoal);
 };
 
